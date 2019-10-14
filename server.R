@@ -113,7 +113,7 @@ server <- function(input, output, session)
       rows <- RMariaDB::dbFetch(res)
       RMariaDB::dbClearResult(res)
       
-      query <<- paste0("insert into country values('",
+      query <- paste0("insert into country values('",
                       input$countryCodeCountry, "', '", input$nameCountry, "', '",
                       input$continent, "', '",input$regions, "', ", 
                       input$surfaceArea, ", ",input$indepYear, ", ", 
